@@ -76,13 +76,14 @@ class PerceptronClassifier:
         return guesses
 
 
-    def findHighWeightFeatures(self, label):
+  def findHighWeightFeatures(self, label):
         """
         Returns a list of the 100 features with the greatest weight for some label
         """
-
-        s = sorted(self.weights[label])
+        featuresWeights = []
         
-            
-
-        return s[-100:]
+        "*** YOUR CODE HERE ***"
+        temp = self.weights[label]
+        temp = sorted(temp)
+        featuresWeights = temp[-100:]
+        return featuresWeights
