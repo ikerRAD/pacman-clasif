@@ -69,9 +69,9 @@ class MiraClassifier:
                 
               label = score.argMax()
               
-              for f in features:
-                w = weight[g][label]
-                wPrime = weight[g][labelPrime]
+          
+              w = weight[g][label]
+              wPrime = weight[g][labelPrime]
                 
               tmp = min(g, ((w - wPrime) * features + 1.0) / (2 * (features*features)))
               
